@@ -1,0 +1,15 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+
+}
+
+#inicio {
+    background-color: gray;
+    padding: 400px;
+    align-items: center;
+}
+#inicio h1 {
+    text-align: center;
+}
