@@ -1,0 +1,72 @@
+#main-inicio {
+    .hero {
+        background-image: linear-gradient(rgba(0,0,0,0.466), rgba(0,0,0,0.473)), url(../img/fondoInicio.jpg);
+        width: 100%;
+        height: 90vh;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        background-attachment: fixed;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        .container-hero {
+            padding: 100px;
+            background-color: rgba(128, 128, 128, 0.541);
+        }
+        h1 {
+            text-align: center;
+            color: white;
+            font-size: 50px;
+        }
+        button {
+            margin-top: 20px;
+            background-color: #FF5B00;
+            color: white;
+        }
+    }
+    .subtitulo-inicio {
+        h2 {
+            text-align: center;
+            margin: 20px;
+            color: white;
+            font-size: 45px;
+        }
+    }
+    #cartas {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-wrap: wrap;
+        width: 100%;
+        margin-top: 3rem;
+        padding: 10px;
+        .card {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            width: 300px;
+            height: 380px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.19);
+            border-radius: 15px;
+            border: 4px solid #D4D925;
+            background-color: #D4D925;
+            margin: 25px;
+            .card-body {
+                h5 {
+                    color: black;
+                }
+                p {
+                    color: black;
+                }
+                .btn {
+                    background-color: green;
+                    color: white;
+                }
+            }
+        }
+    }
+}
