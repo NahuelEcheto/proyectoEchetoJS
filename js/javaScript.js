@@ -70,5 +70,25 @@ const ordenDePrecios = hamburguesa.sort((a, b) => {
 console.log(ordenDePrecios);
 
 
+console.log(comidas);
 
+const cartasComidas = comidas.hamburguesas.reduce((acc, elemento) => {
+    return acc + `
+    <div class="tarjeta">
+        <div class="img-container">
+            <img src=${elemento.img} alt=${elemento.name}>
+        </div>
+        <p>
+            ${elemento.name}
+        </p>
+    </div>
+    `
+}, "")
 
+console.log(cartasComidas);
+
+const contenedorCards = document.querySelector(".container-cards")
+
+console.log(contenedorCards);
+
+contenedorCards.innerHTML = cartasComidas;
