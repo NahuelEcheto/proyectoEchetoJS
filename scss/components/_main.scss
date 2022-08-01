@@ -79,26 +79,88 @@ main {
     .container-cards {
         display: flex;
         flex-wrap: wrap;
+        justify-content: center;
     }
     .tarjeta {
         width: 300px;
+        height: 300px;
+        background-color: #D4D925;
         border: 3px solid black;
+        border-radius: 10px;
         display: flex;
         flex-direction: column;
-        align-items: center;
-        margin: 20px;
+        margin: 25px;
+
     }
     .img-container {
-        width: 100px;
-        height: 150px;
-        padding: 10px;
+        width: 100%;
+        height: 75%;
         img {
-            width: 100px;
-            height: 100px;
+            width: 100%;
+            height: 75%;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
         }
     }   
     p {
         color: black;
         font-size: 19px;
+        font-weight: 600;
+        display: flex;
+        justify-content: center;
     }
 }
+
+// CONTACTO
+
+#main-contacto {
+    .titulo-contacto {
+        color: white;
+        font-size: 18px;
+        margin: 10px;
+    }
+    .registro {
+        display: flex;
+        justify-content: center;
+        #formulario-registro {
+            width: 44rem;
+            height: 29rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            margin: 30px;
+            padding: 20px;
+            border: 2px solid #FF5B00;
+            background-color: #FF5B00;
+            color: white;
+            font-size: 17px;
+            h2 {
+                font-size: 25px;
+            }
+            p {
+                font-size: 15px;
+                color: white;
+            }
+            .campos {
+                width: 19rem;
+                border: 1px solid black;
+                border-radius: 5px;
+                padding: 2px;
+            }
+            .boton-registro {
+                width: 6rem;
+            }
+            #submit {
+                margin-top: 10px;
+                padding: 2px;
+                transition: 1s;
+                &:hover {
+                    background-color: #990000;
+                    border: 2px solid #990000;
+                    color: white;
+                }
+            }
+        }
+    }
+}
+

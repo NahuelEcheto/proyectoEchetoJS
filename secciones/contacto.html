@@ -40,6 +40,29 @@
         </nav>
     </header>
 
+    <main id="main-contacto">
+        <section class="titulo-contacto">
+            <h1>Ingresar o crear una cuenta</h1>
+        </section>
+        <section class="registro">
+            <form id="formulario-registro">
+                <h2>Formulario de registro</h2>
+                <p>Podes registrarte para recibir ofertas y noticias. También para procesar tus compras más rápido.</p>
+                <label for="campo-nombre"> Nombre </label>
+                <input class="campos" type="text" id="campo-nombre">
+                <label for="campo-apellido"> Apellido </label>
+                <input class="campos" type="text" id="campo-apellido">
+                <label for="campo-email"> Email </label>
+                <input class="campos" type="email" id="campo-email">
+                <label for="campo-password"> Contraseña </label>
+                <input class="campos" type="password" id="campo-password">
+                <label class="boton-registro">
+                    <input type="submit" value="Registrarse" id="submit">
+                </label>      
+            </form>
+        </section>
+    </main>
+
     <footer id="footer">
         <section>
             <div class="container-fluid">
@@ -89,7 +112,8 @@
             </div>
         </section>
     </footer>
-    <script src="../js/javaScript.js"></script>
+
+    <script src="../js/registro.js"></script>
 </body>
 <!--Bootstrap-->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
