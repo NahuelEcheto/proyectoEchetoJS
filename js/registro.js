@@ -2,25 +2,71 @@ const formulario = document.querySelector("#formulario-registro");
 const inputNombre = document.querySelector("#campo-nombre");
 const inputApellido = document.querySelector("#campo-apellido");
 const inputEmail = document.querySelector("#campo-email");
-const inputPassword = document.querySelector("#campo-password");
 const submit = document.querySelector("#submit");
+const registrado = document.querySelector("#registrado")
 
-console.log(formulario, inputNombre, inputApellido, inputEmail, inputPassword)
 
-const clientes = []
+
+let clientes = []
 
 class ClienteNuevo {
-    constructor(nombre, apellido, email, password){
+    constructor(nombre, apellido, email){
         this.nombre = nombre;
         this.apellido = apellido;
         this.email = email;
-        this.password = password;
+    }
+}
+
+const agregarClienteNuevo = (array, inputNombre, inputApellido, inputEmail) => {
+    array.push(inputNombre, inputApellido, inputEmail)
+}
+
+const clienteJSON = (clave, valor) => {
+    const arrayJSON = JSON.stringify(valor)
+    localStorage.setItem(clave, arrayJSON)
+}
+
+const parseCliente = (clave) => {
+    const arrayParse = localStorage.getItem("clientes") || "[]"
+    const parsearArray = JSON.parse(arrayParse)
+    return parsearArray
+}
+
+function confirmacionRegistro() {
+    if(inputNombre.value !== "" && inputApellido !== "" && inputEmail !== "") {
+        registrado.innerHTML = `
+        <h2>
+        Gracias ${inputNombre.value} por registrarte a nuestra página
+        </h2>
+        `
+    }
+    else {
+        registrado.innerHTML = `
+        <h2>
+        ¡¡ Por favor completar todos los campos !!
+        </h2>
+        `
     }
 }
 
 formulario.onsubmit = (event) => {
-    event.preventDefault()
-    console.log(event)
-    clientes.push(new ClienteNuevo(inputNombre.value, inputApellido.value, inputEmail.value, inputPassword.value))
-    console.log(clientes)
+    event.preventDefault();
+    agregarClienteNuevo(clientes, inputNombre.value, inputApellido.value, inputEmail.value);
+    confirmacionRegistro();
+    formulario.reset();
+    clienteJSON("clientes", clientes);
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
